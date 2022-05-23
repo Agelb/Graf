@@ -32,6 +32,24 @@ not reasonable for a general-purpose library to be the most performant in all ca
  suggest any particular logging, IO, network, memory model, etc. Clients should be able to drop in the library in their 
  existing projects, whether it's on mobile, spring, EJB, etc, without having to modify their code around the library.
  
+ ## Motivation
+ There are other graph libraries in java, so why create a new one? There are 3 reasons: simplicity, licensing, and old 
+ java versions.  
+ There are some fantastic and performant graph projects in java. However, many of them use the GNU license, which in 
+ many organizations is not permitted. This project uses the Apache 2.0 license, and commits to using this license as 
+ long as the project is active.  
+ Second, simplicity. Many simple problems can be solved with just a graph and a search, so there are simple 
+ implementations provided out of the box to just solve that problem. Other libraries offer more power and 
+ performance, but require learning and brining in additional tools or query languages and patterns. Many of those tools 
+ are also designed to handle massive graphs, work with storage backends, handle distributed concerns, etc. This project 
+ is just graphs and algorithms. If you've ever looked at a problem, thought "I could knock this out by just checking some paths and constraints",
+ this project is for you. If your needs are more "I have billions of nodes and need to find cliques or cycles with complex queries", 
+ this may not be (frankly, isn't) the right tool for that.  
+ Third, old java. Many of the existing graph libraries, particularly Guava, offer an incredible and rich graph library. 
+ However, some of those features require newer java versions or newer versions of Guava, etc. In many organizations, the 
+ java versions are set and stuck on older versions for various reasons, or can't update other libraries due to other 
+ dependencies or shared code, etc. While those cases are not ideal, development is often not ideal, so this offers a tool
+ that can be used for those older systems that can't upgrade for whatever reasons.    
  
  ## Contributing
  Coming soon  
