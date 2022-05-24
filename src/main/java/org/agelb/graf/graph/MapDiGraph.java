@@ -27,7 +27,7 @@ public class MapDiGraph<T> implements Digraph<T> {
     }
 
     @Override
-    public final boolean containsAll(T... values) {
+    public final boolean containsAll(Collection<T> values) {
         for (T value : values) {
             if (!contains(value)) return false;
         }

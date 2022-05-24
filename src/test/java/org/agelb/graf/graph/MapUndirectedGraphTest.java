@@ -20,7 +20,7 @@ public class MapUndirectedGraphTest {
         assertTrue(graph.contains(2));
         assertTrue(graph.contains(3));
         assertTrue(graph.contains(4));
-        assertTrue(graph.containsAll(1, 2, 3, 4));
+        assertTrue(graph.containsAll(Arrays.asList(1, 2, 3, 4)));
         assertFalse(graph.doesNotContain(1));
         assertTrue(graph.doesNotContain(6));
 

@@ -15,7 +15,7 @@ public class MapUndirectedGraph<T> implements UndirectedGraph<T> {
     }
 
     @Override
-    public boolean containsAll(T... values) {
+    public boolean containsAll(Collection<T> values) {
         for (T value : values) {
             if (!contains(value)) return false;
         }

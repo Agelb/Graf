@@ -39,7 +39,7 @@ public class MapWeightedGraph<T> implements WeightedGraph<T> {
     }
 
     @Override
-    public boolean containsAll(T... values) {
+    public boolean containsAll(Collection<T> values) {
         for (T value : values) {
             if (!contains(value)) return false;
         }
