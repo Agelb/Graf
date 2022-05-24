@@ -2,11 +2,11 @@ package org.agelb.graf.graph;
 
 import java.util.*;
 
-public class MapGraph<T> implements Graph<T> {
+public class MapUndirectedGraph<T> implements UndirectedGraph<T> {
 
     private final Map<T, Set<T>> nodes = new HashMap<>();
 
-    private MapGraph(Map<T, Set<T>> graph) {
+    private MapUndirectedGraph(Map<T, Set<T>> graph) {
         nodes.putAll(graph);
     }
 
@@ -51,8 +51,8 @@ public class MapGraph<T> implements Graph<T> {
             nodes.computeIfAbsent(first, x -> new HashSet<>()).add(second);
         }
 
-        public MapGraph<T> build() {
-            return new MapGraph<>(nodes);
+        public MapUndirectedGraph<T> build() {
+            return new MapUndirectedGraph<>(nodes);
         }
     }
 }

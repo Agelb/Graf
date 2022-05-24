@@ -5,7 +5,7 @@ import java.util.Collection;
 /**
  * Undirected, basic graph
  */
-public interface Graph<T> extends NodeContainer<T> {
+public interface UndirectedGraph<T> extends NodeContainer<T> {
 
     Collection<T> neighbors(T value);
 }

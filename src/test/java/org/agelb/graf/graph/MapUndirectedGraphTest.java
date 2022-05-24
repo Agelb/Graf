@@ -6,12 +6,12 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MapGraphTest {
+public class MapUndirectedGraphTest {
 
     @Test
     public void testBasicFunctionality() {
-        MapGraph.Builder<Integer> builder = new MapGraph.Builder<>();
-        Graph<Integer> graph = builder.addEdge(1, 2)
+        MapUndirectedGraph.Builder<Integer> builder = new MapUndirectedGraph.Builder<>();
+        UndirectedGraph<Integer> graph = builder.addEdge(1, 2)
                 .addEdge(2, 3)
                 .addEdge(2, 99)
                 .addNode(4).build();

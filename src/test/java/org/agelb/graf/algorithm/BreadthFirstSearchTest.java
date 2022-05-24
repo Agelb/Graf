@@ -1,7 +1,7 @@
 package org.agelb.graf.algorithm;
 
-import org.agelb.graf.graph.Graph;
-import org.agelb.graf.graph.MapGraph;
+import org.agelb.graf.graph.UndirectedGraph;
+import org.agelb.graf.graph.MapUndirectedGraph;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -12,7 +12,7 @@ public class BreadthFirstSearchTest {
 
     @Test
     public void testEmptyGraph() {
-        Graph<Integer> graph = new MapGraph.Builder<Integer>()
+        UndirectedGraph<Integer> graph = new MapUndirectedGraph.Builder<Integer>()
                 .addEdge(1, 5)
                 .addEdge(1, 4)
                 .addEdge(4, 8)
@@ -23,7 +23,7 @@ public class BreadthFirstSearchTest {
 
     @Test
     public void testFindsPath() {
-        Graph<Integer> graph = new MapGraph.Builder<Integer>()
+        UndirectedGraph<Integer> graph = new MapUndirectedGraph.Builder<Integer>()
                 .addEdge(1, 5)
                 .addEdge(5, 7)
                 .addEdge(1, 4)
@@ -40,7 +40,7 @@ public class BreadthFirstSearchTest {
 
     @Test
     public void testFindsShortestPath() {
-        Graph<Integer> graph = new MapGraph.Builder<Integer>()
+        UndirectedGraph<Integer> graph = new MapUndirectedGraph.Builder<Integer>()
                 .addEdge(1, 5)
                 .addEdge(5, 7)
                 .addEdge(7, 9)
@@ -56,7 +56,7 @@ public class BreadthFirstSearchTest {
 
     @Test
     public void testStopsAtTarget() {
-        Graph<Integer> graph = new MapGraph.Builder<Integer>()
+        UndirectedGraph<Integer> graph = new MapUndirectedGraph.Builder<Integer>()
                 .addEdge(1, 5)
                 .addEdge(5, 7)
                 .addEdge(1, 4)

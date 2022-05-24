@@ -1,6 +1,6 @@
 package org.agelb.graf.algorithm;
 
-import org.agelb.graf.graph.Graph;
+import org.agelb.graf.graph.UndirectedGraph;
 import org.agelb.graf.path.HashPathAccumulator;
 import org.agelb.graf.path.PathAccumulator;
 
@@ -8,9 +8,9 @@ import java.util.*;
 
 public class BreadthFirstSearch<T> implements PathAlgorithm<T> {
 
-    private final Graph<T> graph;
+    private final UndirectedGraph<T> graph;
 
-    public BreadthFirstSearch(Graph<T> graph) {
+    public BreadthFirstSearch(UndirectedGraph<T> graph) {
         this.graph = graph;
     }
 

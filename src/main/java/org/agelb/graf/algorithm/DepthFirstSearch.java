@@ -1,6 +1,6 @@
 package org.agelb.graf.algorithm;
 
-import org.agelb.graf.graph.Graph;
+import org.agelb.graf.graph.UndirectedGraph;
 import org.agelb.graf.path.HashPathAccumulator;
 import org.agelb.graf.path.PathAccumulator;
 
@@ -8,9 +8,9 @@ import java.util.*;
 
 public class DepthFirstSearch<T> {
 
-    private final Graph<T> graph;
+    private final UndirectedGraph<T> graph;
 
-    public DepthFirstSearch(Graph<T> graph) {
+    public DepthFirstSearch(UndirectedGraph<T> graph) {
         this.graph = graph;
     }
 
