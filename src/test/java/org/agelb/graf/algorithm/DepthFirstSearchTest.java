@@ -1,7 +1,7 @@
 package org.agelb.graf.algorithm;
 
-import org.agelb.graf.Graph;
-import org.agelb.graf.MapGraph;
+import org.agelb.graf.graph.Graph;
+import org.agelb.graf.graph.MapGraph;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

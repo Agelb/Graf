@@ -1,6 +1,6 @@
 package org.agelb.graf.algorithm;
 
-import org.agelb.graf.Graph;
+import org.agelb.graf.graph.Graph;
 import org.agelb.graf.path.HashPathAccumulator;
 import org.agelb.graf.path.PathAccumulator;
 

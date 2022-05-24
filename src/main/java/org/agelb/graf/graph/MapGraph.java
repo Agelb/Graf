@@ -1,4 +1,4 @@
-package org.agelb.graf;
+package org.agelb.graf.graph;
 
 import java.util.*;
 
