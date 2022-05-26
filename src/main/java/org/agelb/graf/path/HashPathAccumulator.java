@@ -2,7 +2,7 @@ package org.agelb.graf.path;
 
 import java.util.*;
 
-public class HashPathAccumulator<T> implements PathAccumulator<T> {
+public class HashPathAccumulator<T> implements MapPathAccumulator<T> {
 
     private final Map<T, T> pathMap = new HashMap<>();
 

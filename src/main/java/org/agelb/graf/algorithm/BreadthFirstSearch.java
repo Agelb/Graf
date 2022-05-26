@@ -2,7 +2,7 @@ package org.agelb.graf.algorithm;
 
 import org.agelb.graf.graph.UndirectedGraph;
 import org.agelb.graf.path.HashPathAccumulator;
-import org.agelb.graf.path.PathAccumulator;
+import org.agelb.graf.path.MapPathAccumulator;
 
 import java.util.*;
 
@@ -17,7 +17,7 @@ public class BreadthFirstSearch<T> implements PathAlgorithm<T> {
     @Override
     public List<T> findPath(T start, T end) {
         Set<T> visited = new HashSet<>();
-        PathAccumulator<T> pathAccumulator = new HashPathAccumulator<>();
+        MapPathAccumulator<T> pathAccumulator = new HashPathAccumulator<>();
 
         if (!graph.contains(start) || !graph.contains(end)) return Collections.emptyList();
 

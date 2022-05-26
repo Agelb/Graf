@@ -2,7 +2,7 @@ package org.agelb.graf.algorithm;
 
 import org.agelb.graf.graph.UndirectedGraph;
 import org.agelb.graf.path.HashPathAccumulator;
-import org.agelb.graf.path.PathAccumulator;
+import org.agelb.graf.path.MapPathAccumulator;
 
 import java.util.*;
 
@@ -21,7 +21,7 @@ public class DepthFirstSearch<T> {
 
         Deque<T> stack = new ArrayDeque<>();
         Set<T> visited = new HashSet<>();
-        PathAccumulator<T> accumulator = new HashPathAccumulator<>();
+        MapPathAccumulator<T> accumulator = new HashPathAccumulator<>();
 
         stack.push(start);
         while(!stack.isEmpty()) {

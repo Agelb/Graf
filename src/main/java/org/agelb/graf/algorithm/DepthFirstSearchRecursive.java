@@ -2,7 +2,7 @@ package org.agelb.graf.algorithm;
 
 import org.agelb.graf.graph.UndirectedGraph;
 import org.agelb.graf.path.HashPathAccumulator;
-import org.agelb.graf.path.PathAccumulator;
+import org.agelb.graf.path.MapPathAccumulator;
 
 import java.util.*;
 
@@ -19,13 +19,13 @@ public class DepthFirstSearchRecursive<T> implements PathAlgorithm<T> {
         if (!graph.containsAll(Arrays.asList(start, end))) return Collections.emptyList();
 
         Set<T> visited = new HashSet<>();
-        PathAccumulator<T> path = new HashPathAccumulator<>();
+        MapPathAccumulator<T> path = new HashPathAccumulator<>();
         findPathRecursive(start, end, visited, path);
         return path.toList(end);
     }
 
 
-    private void findPathRecursive(T node, T end, Set<T> visited, PathAccumulator<T> path) {
+    private void findPathRecursive(T node, T end, Set<T> visited, MapPathAccumulator<T> path) {
         visited.add(node);
         for (T neighbor : graph.neighbors(node)) {
             if (!visited.contains(neighbor)) {
