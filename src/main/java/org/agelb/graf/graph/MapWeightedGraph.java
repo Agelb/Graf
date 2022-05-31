@@ -51,11 +51,19 @@ public class MapWeightedGraph<T> implements WeightedGraph<T> {
         return !contains(value);
     }
 
+    @Override
     public Collection<T> neighbors(T value) {
         return nodeConnections.getOrDefault(value, Collections.emptySet())
                 .stream()
                 .map(NodeWeight::getNode)
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public boolean areNeighbors(T first, T second) {
+        return nodeConnections.getOrDefault(first, Collections.emptySet())
+                .stream()
+                .anyMatch(x -> x.getNode().equals(second));
     }
 
     public static class Builder<T> {

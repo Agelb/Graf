@@ -1,7 +1,7 @@
 package org.agelb.graf.algorithm;
 
-import org.agelb.graf.graph.UndirectedGraph;
 import org.agelb.graf.graph.MapUndirectedGraph;
+import org.agelb.graf.graph.UndirectedGraph;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

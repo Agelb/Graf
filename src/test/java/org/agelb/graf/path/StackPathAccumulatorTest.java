@@ -1,6 +1,5 @@
-package org.agelb.graf;
+package org.agelb.graf.path;
 
-import org.agelb.graf.path.StackPathAccumulator;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

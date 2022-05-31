@@ -27,8 +27,14 @@ public class MapUndirectedGraph<T> implements UndirectedGraph<T> {
         return !contains(value);
     }
 
+    @Override
     public Collection<T> neighbors(T value) {
         return nodes.getOrDefault(value, Collections.emptySet());
+    }
+
+    @Override
+    public boolean areNeighbors(T first, T second) {
+        return nodes.getOrDefault(first, Collections.emptySet()).contains(second);
     }
 
     public static class Builder<T> {

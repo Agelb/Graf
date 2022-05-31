@@ -1,9 +1,6 @@
 package org.agelb.graf.path;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 import java.util.function.Predicate;
 
 public class StackPathAccumulator<T> implements PathAccumulator<T> {
@@ -39,11 +36,18 @@ public class StackPathAccumulator<T> implements PathAccumulator<T> {
 
     @Override
     public List<T> toList() {
-        return new ArrayList<>(stack);
+        List<T> path = new ArrayList<>(stack);
+        Collections.reverse(path);
+        return path;
     }
 
     @Override
     public int size() {
         return stack.size();
+    }
+
+    @Override
+    public T peek() {
+        return stack.peek();
     }
 }

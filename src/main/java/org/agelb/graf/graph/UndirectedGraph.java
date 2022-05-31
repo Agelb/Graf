@@ -8,4 +8,6 @@ import java.util.Collection;
 public interface UndirectedGraph<T> extends NodeContainer<T> {
 
     Collection<T> neighbors(T value);
+
+    boolean areNeighbors(T first, T second);
 }

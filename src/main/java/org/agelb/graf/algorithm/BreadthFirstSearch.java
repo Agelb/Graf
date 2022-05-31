@@ -26,18 +26,18 @@ public class BreadthFirstSearch<T> implements PathAlgorithm<T> {
         visited.add(start);
 
         while (frontier.size() > 0) {
-            T current = frontier.pop();
+            T next = frontier.pop();
 
-            for (T neighbor : graph.neighbors(current)) {
+            for (T neighbor : graph.neighbors(next)) {
                 if (!visited.contains(neighbor)) {
-                    pathAccumulator.addStep(current, neighbor);
+                    pathAccumulator.addStep(next, neighbor);
                     if (neighbor == end) {
                         return pathAccumulator.toList(end);
                     }
                     frontier.add(neighbor);
                 }
             }
-            visited.add(current);
+            visited.add(next);
         }
 
         return Collections.emptyList();

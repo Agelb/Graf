@@ -36,4 +36,10 @@ public interface PathAccumulator<T> {
      */
     void removeWhile(Predicate<T> condition);
 
+    /**
+     * Returns the last element added to the path
+     * @return
+     */
+    T peek();
+
 }
